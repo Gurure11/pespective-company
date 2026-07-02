@@ -244,6 +244,41 @@
       padding: 0;
       color: #1f6dc6;
     }
+    .service-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 430px;
+    }
+    .service-card .collapsible-list li.extra-item {
+      display: none;
+    }
+    .service-card.expanded .collapsible-list li.extra-item {
+      display: flex;
+    }
+    .read-more-btn {
+      border: none;
+      background: #1a6bc4;
+      color: white;
+      padding: 0.65rem 1.2rem;
+      border-radius: 40px;
+      cursor: pointer;
+      font-weight: 600;
+      margin-top: auto;
+      align-self: flex-start;
+      transition: 0.2s ease;
+    }
+    .read-more-btn:hover {
+      background: #0b2a44;
+      transform: translateY(-2px);
+    }
+    .read-more-btn i {
+      font-size: 0.85rem;
+      background: transparent;
+      color: white;
+      padding: 0;
+      margin: 0 6px 0 0;
+    }
+
     .badge {
       background: #0b2a44;
       color: white;
@@ -350,6 +385,7 @@
         <a href="#services">Services</a>
         <a href="#tendering">Tendering</a>
         <a href="#registration">Registration</a>
+        <a href="#construction-services">Construction</a>
         <a href="#digital">Digital</a>
         <a href="#contact">Contact</a>
       </div>
@@ -395,7 +431,7 @@
           <div class="service-card animate-on-scroll">
             <i class="fas fa-file-contract"></i>
             <h3>Tendering & Bid Management</h3>
-            <ul>
+            <ul class="collapsible-list">
               <li><i class="fas fa-check-circle"></i> Tender Identification & Analysis</li>
               <li><i class="fas fa-check-circle"></i> Bid Management & Coordination</li>
               <li><i class="fas fa-check-circle"></i> Tender Preparation & Submission</li>
@@ -408,8 +444,8 @@
           </div>
           <div class="service-card animate-on-scroll">
             <i class="fas fa-building"></i>
-            <h3>Company & Tax Registration</h3>
-            <ul>
+            <h3>Business Registration & Tax Services</h3>
+            <ul class="collapsible-list">
               <li><i class="fas fa-check-circle"></i> Company Registration (CIPC)</li>
               <li><i class="fas fa-check-circle"></i> Non-Profit Company (NPC) Registration</li>
               <li><i class="fas fa-check-circle"></i> Director Appointments and Resignations</li>
@@ -418,46 +454,164 @@
               <li><i class="fas fa-check-circle"></i> Memorandum of Incorporation (MOI) Preparation and Amendments</li>
               <li><i class="fas fa-check-circle"></i> Beneficial Ownership (BO) Registration and Updates</li>
               <li><i class="fas fa-check-circle"></i> Company Reinstatement (Deregistration Restoration)</li>
-              <li><i class="fas fa-check-circle"></i> Company Deregistration Assistance</li>
-              <li><i class="fas fa-check-circle"></i> CIPC Compliance Services</li>
-              <li><i class="fas fa-check-circle"></i> CSD Registration</li>
-              <li><i class="fas fa-check-circle"></i> CIDB Registration</li>
-              <li><i class="fas fa-check-circle"></i> COIDA Registration</li>
-              <li><i class="fas fa-check-circle"></i> NHBRC Registration</li>
-              <li><i class="fas fa-check-circle"></i> B-BBEE Affidavits and Certificates</li>
-              <li><i class="fas fa-check-circle"></i> Business Bank Account Assistance</li>
-              <li><i class="fas fa-check-circle"></i> VAT Application & Registration</li>
-              <li><i class="fas fa-check-circle"></i> Tax Returns for Services</li>
-              <li><i class="fas fa-check-circle"></i> Project Administration & Bookkeeping</li>
-              <li><i class="fas fa-check-circle"></i> Company Profile Design</li>
-              <li><i class="fas fa-check-circle"></i> Company Seal and Rubber Stamp Design</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Company Deregistration Assistance</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> CIPC Compliance Services</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> CSD Registration</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> CIDB Registration</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> COIDA Registration</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> NHBRC Registration</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> VAT Application & Registration</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> VAT Submissions</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Tax Returns for Services</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Tax Advisory & Compliance</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Payroll & UIF Registration (on request)</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Project Administration & Bookkeeping</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> B-BBEE Affidavits and Certificates</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Business Bank Account Assistance</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Company Profile Design</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Company Seal and Rubber Stamp Design</li>
             </ul>
-            <span class="badge"><i class="fas fa-check-double"></i> Full compliance</span>
+            <button class="read-more-btn" type="button"><i class="fas fa-chevron-down"></i> Read More</button>
+          </div>
+          <div class="service-card animate-on-scroll">
+            <i class="fas fa-hard-hat"></i>
+            <h3>Health & Safety Services</h3>
+            <ul class="collapsible-list">
+              <li><i class="fas fa-check-circle"></i> Occupational Health and Safety (OHS) Consulting</li>
+              <li><i class="fas fa-check-circle"></i> Construction Health and Safety Management</li>
+              <li><i class="fas fa-check-circle"></i> Health and Safety File Preparation</li>
+              <li><i class="fas fa-check-circle"></i> Health and Safety Plans Development</li>
+              <li><i class="fas fa-check-circle"></i> Risk Assessments and Hazard Identification (HIRA)</li>
+              <li><i class="fas fa-check-circle"></i> Baseline Risk Assessments</li>
+              <li><i class="fas fa-check-circle"></i> Task-Specific Risk Assessments</li>
+              <li><i class="fas fa-check-circle"></i> Safety Audits and Compliance Inspections</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Legal Compliance Audits</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Safety Officer Services (Full-time/Part-time)</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Construction Health and Safety Agent Services</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Safety Supervision and Site Monitoring</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Incident and Accident Investigations</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Root Cause Analysis and Corrective Action Plans</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Emergency Preparedness and Response Planning</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Fire Risk Assessments</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Fire Safety Equipment Inspections</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Supply and Delivery of PPE</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Supply and Delivery of Safety Equipment</li>
+            </ul>
+            <button class="read-more-btn" type="button"><i class="fas fa-chevron-down"></i> Read More</button>
+          </div>
+          <div class="service-card animate-on-scroll">
+            <i class="fas fa-road"></i>
+            <h3>Civil Engineering Services</h3>
+            <ul class="collapsible-list">
+              <li><i class="fas fa-check-circle"></i> Roads and Pavement Construction</li>
+              <li><i class="fas fa-check-circle"></i> Stormwater Drainage Systems</li>
+              <li><i class="fas fa-check-circle"></i> Water Supply Infrastructure</li>
+              <li><i class="fas fa-check-circle"></i> Sewer Reticulation Systems</li>
+              <li><i class="fas fa-check-circle"></i> Bulk Earthworks</li>
+              <li><i class="fas fa-check-circle"></i> Site Clearance and Preparation</li>
+              <li><i class="fas fa-check-circle"></i> Excavation and Backfilling</li>
+              <li><i class="fas fa-check-circle"></i> Concrete Works</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Reinforced Concrete Structures</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Retaining Walls</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Culverts and Bridges</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Kerbing and Paving</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Parking Areas and Hardstands</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Pipeline Installation</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Trenching and Reinstatement</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Gabion and River Protection Works</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Dam and Reservoir Construction</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Rehabilitation and Maintenance of Civil Infrastructure</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Municipal Infrastructure Development</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> General Civil Maintenance</li>
+            </ul>
+            <button class="read-more-btn" type="button"><i class="fas fa-chevron-down"></i> Read More</button>
+          </div>
+          <div class="service-card animate-on-scroll">
+            <i class="fas fa-bolt"></i>
+            <h3>Electrical Engineering Services</h3>
+            <ul class="collapsible-list">
+              <li><i class="fas fa-check-circle"></i> Low Voltage (LV) Electrical Installations</li>
+              <li><i class="fas fa-check-circle"></i> Medium Voltage (MV) Electrical Installations</li>
+              <li><i class="fas fa-check-circle"></i> High Voltage (HV) Electrical Works</li>
+              <li><i class="fas fa-check-circle"></i> Electrical Reticulation Systems</li>
+              <li><i class="fas fa-check-circle"></i> Street Lighting Installation and Maintenance</li>
+              <li><i class="fas fa-check-circle"></i> High Mast Lighting Installation</li>
+              <li><i class="fas fa-check-circle"></i> Public Lighting Systems</li>
+              <li><i class="fas fa-check-circle"></i> Distribution Board Installation</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Cable Laying and Jointing</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Electrical Cable Trenching</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Substation Installation and Maintenance</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Transformer Installation</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Switchgear Installation</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Backup Power Systems</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Generator Installation</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> UPS Installation</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Solar PV System Design and Installation</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Electrical Testing and Commissioning</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Electrical Fault Finding and Repairs</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Preventative Electrical Maintenance</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Industrial Electrical Installations</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Commercial Electrical Installations</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Residential Electrical Installations</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Energy Efficiency Solutions</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Electrical Compliance Certificates (COC)</li>
+            </ul>
+            <button class="read-more-btn" type="button"><i class="fas fa-chevron-down"></i> Read More</button>
+          </div>
+          <div class="service-card animate-on-scroll">
+            <i class="fas fa-city"></i>
+            <h3>Building Construction Services</h3>
+            <ul class="collapsible-list">
+              <li><i class="fas fa-check-circle"></i> Residential Building Construction</li>
+              <li><i class="fas fa-check-circle"></i> Commercial Building Construction</li>
+              <li><i class="fas fa-check-circle"></i> Industrial Building Construction</li>
+              <li><i class="fas fa-check-circle"></i> Institutional Building Construction</li>
+              <li><i class="fas fa-check-circle"></i> Turnkey Building Projects</li>
+              <li><i class="fas fa-check-circle"></i> Design and Build Projects</li>
+              <li><i class="fas fa-check-circle"></i> Foundations and Substructures</li>
+              <li><i class="fas fa-check-circle"></i> Superstructure Construction</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Brickwork and Blockwork</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Reinforced Concrete Works</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Structural Steel Construction</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Roofing Installation</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Ceiling Installation</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Partitioning Systems</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Doors and Windows Installation</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Plastering and Screeding</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Floor Finishes (Tiles, Vinyl, Epoxy, Concrete)</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Painting and Decorating</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Carpentry and Joinery</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Plumbing Installations</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Drainage Installations</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Mechanical Services Coordination</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Electrical Building Services</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Fire Protection Systems</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> HVAC Coordination</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Building Renovations</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Building Alterations and Extensions</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Refurbishment Projects</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Maintenance and Repairs</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Waterproofing</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> External Works</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Boundary Walls and Fencing</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Paving and Landscaping</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Facilities Maintenance</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Project Management and Construction Supervision</li>
+            </ul>
+            <button class="read-more-btn" type="button"><i class="fas fa-chevron-down"></i> Read More</button>
           </div>
           <div class="service-card animate-on-scroll">
             <i class="fas fa-globe"></i>
-            <h3>Web, Apps & E‑commerce</h3>
-            <ul>
+            <h3>Web, Apps & E-commerce</h3>
+            <ul class="collapsible-list">
               <li><i class="fas fa-check-circle"></i> Responsive websites & landing pages</li>
               <li><i class="fas fa-check-circle"></i> Mobile app development (iOS/Android)</li>
-              <li><i class="fas fa-check-circle"></i> E‑commerce & online stores</li>
+              <li><i class="fas fa-check-circle"></i> E-commerce & online stores</li>
               <li><i class="fas fa-check-circle"></i> Online learning platforms (LMS)</li>
               <li><i class="fas fa-check-circle"></i> Custom web applications</li>
               <li><i class="fas fa-check-circle"></i> Maintenance & support</li>
             </ul>
             <span class="badge"><i class="fas fa-code"></i> Digital solutions</span>
-          </div>
-          <div class="service-card animate-on-scroll">
-            <i class="fas fa-hand-holding-usd"></i>
-            <h3>Tax, VAT & Advisory</h3>
-            <ul>
-              <li><i class="fas fa-check-circle"></i> VAT application & registration</li>
-              <li><i class="fas fa-check-circle"></i> Tax returns for services (provisional, income)</li>
-              <li><i class="fas fa-check-circle"></i> Management reporting & data capturing</li>
-              <li><i class="fas fa-check-circle"></i> Submission of VAT & tax returns</li>
-              <li><i class="fas fa-check-circle"></i> Training on tender & tax compliance</li>
-            </ul>
-            <span class="badge"><i class="fas fa-calculator"></i> Financial support</span>
           </div>
         </div>
       </section>
@@ -480,11 +634,186 @@
 
       <!-- registration + tax (from doc2 + extra) -->
       <section id="registration">
-        <h2 class="section-title animate-on-scroll"><i class="fas fa-id-card"></i> Company Registration & Tax</h2>
+        <h2 class="section-title animate-on-scroll"><i class="fas fa-id-card"></i> Business Registration & Tax Services</h2>
         <div class="grid-2col">
-          <div class="service-card"><i class="fas fa-registered"></i><h3>Company Registration Services</h3><ul><li><i class="fas fa-check-circle"></i> Company Registration (CIPC)</li><li><i class="fas fa-check-circle"></i> Non-Profit Company (NPC) Registration</li><li><i class="fas fa-check-circle"></i> Director Appointments and Resignations</li><li><i class="fas fa-check-circle"></i> Company Amendments (Name, Address, Directors, Shareholders)</li><li><i class="fas fa-check-circle"></i> Share Certificate Preparation</li><li><i class="fas fa-check-circle"></i> Memorandum of Incorporation (MOI) Preparation and Amendments</li><li><i class="fas fa-check-circle"></i> Beneficial Ownership (BO) Registration and Updates</li><li><i class="fas fa-check-circle"></i> Company Reinstatement (Deregistration Restoration)</li><li><i class="fas fa-check-circle"></i> Company Deregistration Assistance</li><li><i class="fas fa-check-circle"></i> CIPC Compliance Services</li><li><i class="fas fa-check-circle"></i> CSD Registration</li><li><i class="fas fa-check-circle"></i> CIDB Registration</li><li><i class="fas fa-check-circle"></i> COIDA Registration</li><li><i class="fas fa-check-circle"></i> NHBRC Registration</li><li><i class="fas fa-check-circle"></i> VAT Application & Registration</li><li><i class="fas fa-check-circle"></i> Tax Returns for Services</li><li><i class="fas fa-check-circle"></i> Project Administration & Bookkeeping</li><li><i class="fas fa-check-circle"></i> Company Profile Design</li><li><i class="fas fa-check-circle"></i> Company Seal and Rubber Stamp Design</li></ul></div>
-          <div class="service-card"><i class="fas fa-box-open"></i><h3>Perspective Point Packaging</h3><ul><li><i class="fas fa-check-circle"></i> B-BBEE Affidavits and Certificates</li><li><i class="fas fa-check-circle"></i> Business Bank Account Assistance</li></ul></div>
-          <div class="service-card"><i class="fas fa-file-invoice-dollar"></i><h3>Tax & VAT</h3><ul><li><i class="fas fa-check-circle"></i> VAT Application & Registration</li><li><i class="fas fa-check-circle"></i> Tax Returns for Services</li><li><i class="fas fa-check-circle"></i> VAT submissions</li><li><i class="fas fa-check-circle"></i> Tax advisory & compliance</li><li><i class="fas fa-check-circle"></i> Payroll & UIF registration (on request)</li></ul></div>
+          <div class="service-card">
+            <i class="fas fa-registered"></i>
+            <h3>Company, Tax & Compliance</h3>
+            <ul class="collapsible-list">
+              <li><i class="fas fa-check-circle"></i> Company Registration (CIPC)</li>
+              <li><i class="fas fa-check-circle"></i> Non-Profit Company (NPC) Registration</li>
+              <li><i class="fas fa-check-circle"></i> Director Appointments and Resignations</li>
+              <li><i class="fas fa-check-circle"></i> Company Amendments (Name, Address, Directors, Shareholders)</li>
+              <li><i class="fas fa-check-circle"></i> Share Certificate Preparation</li>
+              <li><i class="fas fa-check-circle"></i> Memorandum of Incorporation (MOI) Preparation and Amendments</li>
+              <li><i class="fas fa-check-circle"></i> Beneficial Ownership (BO) Registration and Updates</li>
+              <li><i class="fas fa-check-circle"></i> Company Reinstatement (Deregistration Restoration)</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Company Deregistration Assistance</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> CIPC Compliance Services</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> CSD Registration</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> CIDB Registration</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> COIDA Registration</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> NHBRC Registration</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> VAT Application & Registration</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> VAT Submissions</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Tax Returns for Services</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Tax Advisory & Compliance</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Payroll & UIF Registration (on request)</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Project Administration & Bookkeeping</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> B-BBEE Affidavits and Certificates</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Business Bank Account Assistance</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Company Profile Design</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Company Seal and Rubber Stamp Design</li>
+            </ul>
+            <button class="read-more-btn" type="button"><i class="fas fa-chevron-down"></i> Read More</button>
+          </div>
+          <div class="service-card"><i class="fas fa-box-open"></i><h3>Perspective Point Packaging</h3><ul><li><i class="fas fa-check-circle"></i> B-BBEE Affidavits and Certificates</li><li><i class="fas fa-check-circle"></i> Business Bank Account Assistance</li></ul><span class="badge"><i class="fas fa-briefcase"></i> Business support</span></div>
+        </div>
+      </section>
+
+      <section id="construction-services">
+        <h2 class="section-title animate-on-scroll"><i class="fas fa-helmet-safety"></i> Safety, Engineering & Construction Services</h2>
+        <div class="grid-2col">
+          <div class="service-card">
+            <i class="fas fa-user-shield"></i>
+            <h3>Health & Safety Services</h3>
+            <ul class="collapsible-list">
+              <li><i class="fas fa-check-circle"></i> Occupational Health and Safety (OHS) Consulting</li>
+              <li><i class="fas fa-check-circle"></i> Construction Health and Safety Management</li>
+              <li><i class="fas fa-check-circle"></i> Health and Safety File Preparation</li>
+              <li><i class="fas fa-check-circle"></i> Health and Safety Plans Development</li>
+              <li><i class="fas fa-check-circle"></i> Risk Assessments and Hazard Identification (HIRA)</li>
+              <li><i class="fas fa-check-circle"></i> Baseline Risk Assessments</li>
+              <li><i class="fas fa-check-circle"></i> Task-Specific Risk Assessments</li>
+              <li><i class="fas fa-check-circle"></i> Safety Audits and Compliance Inspections</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Legal Compliance Audits</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Safety Officer Services (Full-time/Part-time)</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Construction Health and Safety Agent Services</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Safety Supervision and Site Monitoring</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Incident and Accident Investigations</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Root Cause Analysis and Corrective Action Plans</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Emergency Preparedness and Response Planning</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Fire Risk Assessments</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Fire Safety Equipment Inspections</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Supply and Delivery of PPE</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Supply and Delivery of Safety Equipment</li>
+            </ul>
+            <button class="read-more-btn" type="button"><i class="fas fa-chevron-down"></i> Read More</button>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-truck-loading"></i>
+            <h3>PPE & Safety Equipment Supply</h3>
+            <ul class="collapsible-list">
+              <li><i class="fas fa-check-circle"></i> Supply and Delivery of PPE</li>
+              <li><i class="fas fa-check-circle"></i> Supply and Delivery of Safety Equipment</li>
+              <li><i class="fas fa-check-circle"></i> Safety boots, helmets, gloves and protective clothing</li>
+              <li><i class="fas fa-check-circle"></i> Reflective wear and site safety signage</li>
+              <li><i class="fas fa-check-circle"></i> Fire safety equipment support</li>
+              <li><i class="fas fa-check-circle"></i> Site safety consumables and accessories</li>
+            </ul>
+            <span class="badge"><i class="fas fa-shipping-fast"></i> Supply & delivery</span>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-road"></i>
+            <h3>Civil Engineering Services</h3>
+            <ul class="collapsible-list">
+              <li><i class="fas fa-check-circle"></i> Roads and Pavement Construction</li>
+              <li><i class="fas fa-check-circle"></i> Stormwater Drainage Systems</li>
+              <li><i class="fas fa-check-circle"></i> Water Supply Infrastructure</li>
+              <li><i class="fas fa-check-circle"></i> Sewer Reticulation Systems</li>
+              <li><i class="fas fa-check-circle"></i> Bulk Earthworks</li>
+              <li><i class="fas fa-check-circle"></i> Site Clearance and Preparation</li>
+              <li><i class="fas fa-check-circle"></i> Excavation and Backfilling</li>
+              <li><i class="fas fa-check-circle"></i> Concrete Works</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Reinforced Concrete Structures</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Retaining Walls</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Culverts and Bridges</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Kerbing and Paving</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Parking Areas and Hardstands</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Pipeline Installation</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Trenching and Reinstatement</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Gabion and River Protection Works</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Dam and Reservoir Construction</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Rehabilitation and Maintenance of Civil Infrastructure</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Municipal Infrastructure Development</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> General Civil Maintenance</li>
+            </ul>
+            <button class="read-more-btn" type="button"><i class="fas fa-chevron-down"></i> Read More</button>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-bolt"></i>
+            <h3>Electrical Engineering Services</h3>
+            <ul class="collapsible-list">
+              <li><i class="fas fa-check-circle"></i> Low Voltage (LV) Electrical Installations</li>
+              <li><i class="fas fa-check-circle"></i> Medium Voltage (MV) Electrical Installations</li>
+              <li><i class="fas fa-check-circle"></i> High Voltage (HV) Electrical Works</li>
+              <li><i class="fas fa-check-circle"></i> Electrical Reticulation Systems</li>
+              <li><i class="fas fa-check-circle"></i> Street Lighting Installation and Maintenance</li>
+              <li><i class="fas fa-check-circle"></i> High Mast Lighting Installation</li>
+              <li><i class="fas fa-check-circle"></i> Public Lighting Systems</li>
+              <li><i class="fas fa-check-circle"></i> Distribution Board Installation</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Cable Laying and Jointing</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Electrical Cable Trenching</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Substation Installation and Maintenance</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Transformer Installation</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Switchgear Installation</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Backup Power Systems</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Generator Installation</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> UPS Installation</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Solar PV System Design and Installation</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Electrical Testing and Commissioning</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Electrical Fault Finding and Repairs</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Preventative Electrical Maintenance</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Industrial Electrical Installations</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Commercial Electrical Installations</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Residential Electrical Installations</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Energy Efficiency Solutions</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Electrical Compliance Certificates (COC)</li>
+            </ul>
+            <button class="read-more-btn" type="button"><i class="fas fa-chevron-down"></i> Read More</button>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-building"></i>
+            <h3>Building Construction Services</h3>
+            <ul class="collapsible-list">
+              <li><i class="fas fa-check-circle"></i> Residential Building Construction</li>
+              <li><i class="fas fa-check-circle"></i> Commercial Building Construction</li>
+              <li><i class="fas fa-check-circle"></i> Industrial Building Construction</li>
+              <li><i class="fas fa-check-circle"></i> Institutional Building Construction</li>
+              <li><i class="fas fa-check-circle"></i> Turnkey Building Projects</li>
+              <li><i class="fas fa-check-circle"></i> Design and Build Projects</li>
+              <li><i class="fas fa-check-circle"></i> Foundations and Substructures</li>
+              <li><i class="fas fa-check-circle"></i> Superstructure Construction</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Brickwork and Blockwork</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Reinforced Concrete Works</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Structural Steel Construction</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Roofing Installation</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Ceiling Installation</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Partitioning Systems</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Doors and Windows Installation</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Plastering and Screeding</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Floor Finishes (Tiles, Vinyl, Epoxy, Concrete)</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Painting and Decorating</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Carpentry and Joinery</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Plumbing Installations</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Drainage Installations</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Mechanical Services Coordination</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Electrical Building Services</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Fire Protection Systems</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> HVAC Coordination</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Building Renovations</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Building Alterations and Extensions</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Refurbishment Projects</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Maintenance and Repairs</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Waterproofing</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> External Works</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Boundary Walls and Fencing</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Paving and Landscaping</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Facilities Maintenance</li>
+              <li class="extra-item"><i class="fas fa-check-circle"></i> Project Management and Construction Supervision</li>
+            </ul>
+            <button class="read-more-btn" type="button"><i class="fas fa-chevron-down"></i> Read More</button>
+          </div>
         </div>
       </section>
 
@@ -561,6 +890,19 @@
     setInterval(nextSlide, 4000);
     // Ensure first slide is active
     showSlide(0);
+
+
+
+    // Read more / read less for long service cards
+    document.querySelectorAll('.read-more-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const card = btn.closest('.service-card');
+        const expanded = card.classList.toggle('expanded');
+        btn.innerHTML = expanded
+          ? '<i class="fas fa-chevron-up"></i> Show Less'
+          : '<i class="fas fa-chevron-down"></i> Read More';
+      });
+    });
 
     // scroll animation trigger
     const animElements = document.querySelectorAll('.animate-on-scroll');
